@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Do You Love Me? ❤️</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    overflow:hidden;
+    text-align:center;
+}
+
+.container{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1{
+    margin-bottom:30px;
+}
+
+button{
+    padding:12px 28px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    margin:10px;
+    transition:0.2s;
+}
+
+#yesBtn{
+    background:#28a745;
+    color:white;
+}
+
+#noBtn{
+    background:#dc3545;
+    color:white;
+    position:relative;
+}
+#message{
+    margin-top:20px;
+    font-size:22px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Do you love me? 💖</h1>
+
+    <button id="yesBtn">Yes 😍</button>
+    <button id="noBtn">No 😜</button>
+
+    <div id="message"></div>
+</div>
+
+<script>
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+const message = document.getElementById("message");
+
+yesBtn.onclick = () => {
+    message.innerHTML = "I knew it 😘💞";
+};
+
+noBtn.onmouseover = () => {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+    noBtn.style.position = "absolute";
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+};
+</script>
+
+</body>
+</html>
